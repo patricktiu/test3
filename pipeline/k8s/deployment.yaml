@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: servletsamplewar
+  name: servletsamplewar
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: servletsamplewar
+  template:
+    metadata:
+      labels:
+        app: servletsamplewar
+    spec:
+      containers:
+        - image: docker.io/application
+          imagePullPolicy: Always
+          name: servletsamplewar
+          ports:
+            - containerPort: 9080
