@@ -2,7 +2,7 @@
 apiVersion: tekton.dev/v1alpha1
 kind: PipelineResource
 metadata:
-  name: application-repo-3
+  name: application-repo
 spec:
   type: git
   params:
@@ -12,7 +12,7 @@ spec:
 apiVersion: tekton.dev/v1alpha1
 kind: PipelineResource
 metadata:
-  name: application-image-3
+  name: application-image
 spec:
   type: image
   params:
