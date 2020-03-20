@@ -2,7 +2,7 @@
 apiVersion: tekton.dev/v1alpha1
 kind: PipelineResource
 metadata:
-  name: application-repo
+  name: application-repo-3
 spec:
   type: git
   params:
@@ -12,9 +12,9 @@ spec:
 apiVersion: tekton.dev/v1alpha1
 kind: PipelineResource
 metadata:
-  name: application-image
+  name: application-image-3
 spec:
   type: image
   params:
     - name: url
-      value: image-registry.openshift-image-registry.svc:5000/default/servletsamplewar:latest
+      value: image-registry.openshift-image-registry.svc:5000/myproject/servletsamplewar:latest
